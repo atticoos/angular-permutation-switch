@@ -2,6 +2,15 @@
 
 An enhancement of the principles behind `ng-switch` and `ng-messages` to allow for more complex view dynamics based on changing permutations
 
+## Installation
+
+```sh
+bower install angular-permutation-switch
+```
+
+```js
+angular.module('yourModule', ['ngPermutationSwitch']);
+```
 
 ## Example
 
@@ -22,10 +31,22 @@ An enhancement of the principles behind `ng-switch` and `ng-messages` to allow f
 ### Old Way
 
 ```html
-<div ng-if="someComplicatedCondition() && someComplicatedCondition() && anotherCondition()">Foo is true, bar is true</div>
-<div ng-if="!someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())">Foo is false, bar is false</div>
-<div ng-if="someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())">Foo is true, bar is false</div>
-<div ng-if="!someComplicatedCondition() && someComplicatedCondition() && anotherCondition()">Foo is false, bar is true</div>
-<div ng-if="someComplicatedCondition()">Foo is true, doesn't matter what bar is</div>
-<div ng-if="!(someComplicatedCondition() && anotherCondition())">Bar is false, doesn't matter what foo is</div>
+<div ng-if="someComplicatedCondition() && someComplicatedCondition() && anotherCondition()">
+  Foo is true, bar is true
+</div>
+<div ng-if="!someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())">
+  Foo is false, bar is false
+</div>
+<div ng-if="someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())">
+  Foo is true, bar is false
+</div>
+<div ng-if="!someComplicatedCondition() && someComplicatedCondition() && anotherCondition()">
+  Foo is false, bar is true
+</div>
+<div ng-if="someComplicatedCondition()">
+  Foo is true, doesn't matter what bar is
+</div>
+<div ng-if="!(someComplicatedCondition() && anotherCondition())">
+  Bar is false, doesn't matter what foo is
+</div>
 ```
