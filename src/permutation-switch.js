@@ -25,9 +25,11 @@
           }
 
           angular.forEach(permutationSwitchController.permutations, function (selectedTransclude) {
-            var permutation = $parse(selectedTransclude.expression)(scope);
-            for (var key in permutation) {
-              if (value[key] !== permutation[key]) {
+            var predicate = $parse(selectedTransclude.expression)(scope);
+
+            // if any inequalites are found in the predicate, do not transclude
+            for (var key in predicate) {
+              if (value[key] !== predicate[key]) {
                 return;
               }
             }
