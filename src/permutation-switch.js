@@ -1,7 +1,5 @@
 (function () {
   'use strict';
-  var MODULE_NAME = 'ngPermutationSwitch';
-
   function PermutationSwitchDirective ($parse) {
     return {
       restrict: 'AE',
@@ -62,5 +60,4 @@
   angular.module('ngPermutationSwitch', [])
   .directive('permutationSwitch', ['$parse', PermutationSwitchDirective])
   .directive('permutationSwitchWhen', [PermutationSwitchWhenDirective]);
-
 }).call(this);
