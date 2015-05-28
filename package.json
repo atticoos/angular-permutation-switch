@@ -1,0 +1,11 @@
+{
+  "name": "angular-permutation-switch",
+  "version": "1.0.0",
+  "description": "Angularjs permutation switch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Atticus White <contact@atticuswhite.com> (http://atticuswhite.com/)",
+  "license": "MIT"
+}
