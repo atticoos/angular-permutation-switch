@@ -9,10 +9,10 @@ An enhancement of the principles behind `ng-switch` and `ng-messages` to allow f
 
 ```html
 <div permutation-switch="{foo: someComplicatedCondition(), bar: someComplicatedCondition() && anotherCondition()}">
-  <div permutation-switch-when="{foo: true, bar: false}">Foo is true, bar is false</div>
-  <div permutation-switch-when="{foo: false, bar: true}">Foo is false, bar is true</div>
   <div permutation-switch-when="{foo: true, bar: true}">Foo is true, bar is true</div>
   <div permutation-switch-when="{foo: false, bar: false}">Foo is false, bar is false</div>
+  <div permutation-switch-when="{foo: true, bar: false}">Foo is true, bar is false</div>
+  <div permutation-switch-when="{foo: false, bar: true}">Foo is false, bar is true</div>
   <div permutation-switch-when="{foo: true}">Foo is true, doesn't matter what bar is</div>
   <div permutation-switch-when="{bar: false}">Bar is false, doesn't matter what foo is</div>
   ...
@@ -22,10 +22,10 @@ An enhancement of the principles behind `ng-switch` and `ng-messages` to allow f
 ### Old Way
 
 ```html
-<div ng-if="someComplicatedCondition() && someComplicatedCondition() && anotherCondition()"></div>
-<div ng-if="!someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())"></div>
-<div ng-if="someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())"></div>
-<div ng-if="!someComplicatedCondition() && someComplicatedCondition() && anotherCondition()"></div>
-<div ng-if="someComplicatedCondition()"></div>
-<div ng-if="!(someComplicatedCondition() && anotherCondition())"></div>
+<div ng-if="someComplicatedCondition() && someComplicatedCondition() && anotherCondition()">Foo is true, bar is true</div>
+<div ng-if="!someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())">Foo is false, bar is false</div>
+<div ng-if="someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())">Foo is true, bar is false</div>
+<div ng-if="!someComplicatedCondition() && someComplicatedCondition() && anotherCondition()">Foo is false, bar is true</div>
+<div ng-if="someComplicatedCondition()">Foo is true, doesn't matter what bar is</div>
+<div ng-if="!(someComplicatedCondition() && anotherCondition())">Bar is false, doesn't matter what foo is</div>
 ```
