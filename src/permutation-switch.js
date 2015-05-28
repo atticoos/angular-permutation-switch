@@ -4,7 +4,7 @@
     return {
       restrict: 'AE',
       require: 'permutationSwitch',
-      priority: 1200,
+      priority: 500,
       controller: ['$scope', function NgPermutationSwitchCtrl () {
         this.permutations = [];
 
@@ -52,7 +52,7 @@
       restrict: 'AE',
       require: '^permutationSwitch',
       transclude: 'element',
-      priority: 1200,
+      priority: 500,
       link: function (scope, element, attrs, ctrl, $transclude) {
         ctrl.addPermutation({element: element, transclude: $transclude, expression: attrs.permutationSwitchWhen});
       }

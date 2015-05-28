@@ -5,8 +5,10 @@ An enhancement of the principles behind `ng-switch` and `ng-messages` to allow f
 
 ## Example
 
+### New Way
+
 ```html
-<div permutation-switch="{foo: true, bar: false}">
+<div permutation-switch="{foo: someComplicatedCondition(), bar: someComplicatedCondition() && anotherCondition()}">
   <div permutation-switch-when="{foo: true, bar: false}">Foo is true, bar is false</div>
   <div permutation-switch-when="{foo: false, bar: true}">Foo is false, bar is true</div>
   <div permutation-switch-when="{foo: true, bar: true}">Foo is true, bar is true</div>
@@ -15,4 +17,15 @@ An enhancement of the principles behind `ng-switch` and `ng-messages` to allow f
   <div permutation-switch-when="{bar: false}">Bar is false, doesn't matter what foo is</div>
   ...
 </div>
+```
+
+### Old Way
+
+```html
+<div ng-if="someComplicatedCondition() && someComplicatedCondition() && anotherCondition()"></div>
+<div ng-if="!someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())"></div>
+<div ng-if="someComplicatedCondition() && !(someComplicatedCondition() && anotherCondition())"></div>
+<div ng-if="!someComplicatedCondition() && someComplicatedCondition() && anotherCondition()"></div>
+<div ng-if="someComplicatedCondition()"></div>
+<div ng-if="!(someComplicatedCondition() && anotherCondition())"></div>
 ```
