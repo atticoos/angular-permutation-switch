@@ -9,5 +9,8 @@
     "angularjs",
     "switch"
   ],
+  "dependencies": {
+    "angular": "*"
+  },
   "license": "MIT"
 }
