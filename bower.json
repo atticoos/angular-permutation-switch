@@ -2,12 +2,16 @@
   "name": "angular-permutation-switch",
   "version": "1.0.0",
   "authors": [
-    "Atticus White <contact@atticuswhite.com>"
+    "Atticus White <atticus@robinpowered.com>"
   ],
   "description": "Angular permutation switch",
   "keywords": [
     "angularjs",
-    "switch"
+    "switch",
+    "permutations"
   ],
+  "dependencies": {
+    "angular": "*"
+  },
   "license": "MIT"
 }
