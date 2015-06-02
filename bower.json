@@ -11,7 +11,11 @@
     "permutations"
   ],
   "dependencies": {
-    "angular": "*"
+    "angular": "*",
+    "jquery": "~2.1.4"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "angular-mocks": "~1.4.0"
+  }
 }
