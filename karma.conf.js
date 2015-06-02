@@ -10,6 +10,11 @@ module.exports = function (config) {
       'test/**/*.spec.js',
     ],
     reporters: ['mocha'],
-    plugins: ['karma-mocha-reporter']
+    plugins: [
+      'karma-mocha',
+      'karma-chai',
+      'karma-mocha-reporter',
+      'karma-phantomjs-launcher'
+    ]
   });
 };

@@ -11,7 +11,8 @@
     "permutations"
   ],
   "dependencies": {
-    "angular": "*"
+    "angular": "*",
+    "jquery": "~2.1.4"
   },
   "license": "MIT",
   "devDependencies": {
