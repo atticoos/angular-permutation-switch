@@ -1,11 +1,32 @@
 {
   "name": "angular-permutation-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angularjs permutation switch",
-  "main": "index.js",
+  "main": "src/permutation-switch.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp"
+  },
+  "directories": {
+    "test": "test"
   },
   "author": "Atticus White <atticus@robinpowered.com> (http://atticuswhite.com/)",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajwhite/angular-permutation-switch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "chai": "^2.3.0",
+    "gulp": "^3.9.0",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.11.0",
+    "karma": "^0.12.35",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.17"
+  }
 }

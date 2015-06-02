@@ -1,6 +1,6 @@
 {
   "name": "angular-permutation-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Atticus White <atticus@robinpowered.com>"
   ],
@@ -11,7 +11,11 @@
     "permutations"
   ],
   "dependencies": {
-    "angular": "*"
+    "angular": "*",
+    "jquery": ">= 1.7"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "angular-mocks": "~1.4.0"
+  }
 }
