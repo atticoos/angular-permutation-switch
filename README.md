@@ -1,5 +1,11 @@
 # angular-permutation-switch
 
+
+[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://bower.herokuapp.com/packages/angular-permutation-switch)
+[![Build Status](http://img.shields.io/travis/ajwhite/angular-permutation-switch.svg?style=flat)](http://travis-ci.org/ajwhite/angular-permutation-switch)
+[![Dependency Status](http://img.shields.io/gemnasium/ajwhite/angular-permutation-switch.svg?style=flat)](https://gemnasium.com/ajwhite/angular-permutation-switch)
+
+
 An enhancement of the principles behind [`ng-switch`](ngSwitch) and [`ng-messages`](ngMessages) to allow for more complex view dynamics based on changing permutations
 
 ## Installation
