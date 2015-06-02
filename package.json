@@ -4,7 +4,7 @@
   "description": "Angularjs permutation switch",
   "main": "src/permutation-switch.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp"
   },
   "directories": {
     "test": "test"
@@ -19,6 +19,8 @@
     "bower": "^1.4.1",
     "chai": "^2.3.0",
     "gulp": "^3.9.0",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.11.0",
     "karma": "^0.12.35",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^0.1.10",
