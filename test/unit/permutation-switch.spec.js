@@ -24,11 +24,9 @@ describe('permutation-switch', function () {
     it ('should show the element if the case is satisfied', function () {
       expect(getPermutations().eq(0).text()).to.equal('First');
     });
-
     it ('should hide the element if the case is not satisfid', function () {
       expect(getPermutations().eq(1).length).to.equal(0);
     });
-
     it ('should reflect the proper case when the premise changes', function () {
       expect(getPermutations().eq(0).text()).to.equal('First');
       expect(getPermutations().eq(1).length).to.equal(0);
@@ -61,17 +59,24 @@ describe('permutation-switch', function () {
       expect(getPermutations().eq(3).length).to.equal(0);
     });
     it ('should reflect the proper case when the premise changes', function () {
+      // true, true
       expect(getPermutations().eq(0).text()).to.equal('First');
       expect(getPermutations().eq(1).length).to.equal(0);
+
+      // true, false
       scope.two = false;
       scope.$apply();
       expect(getPermutations().eq(0).text()).to.equal('Second');
       expect(getPermutations().eq(1).length).to.equal(0);
+
+      // false, true
       scope.one = false;
       scope.two = true;
       scope.$apply();
       expect(getPermutations().eq(0).text()).to.equal('Third');
       expect(getPermutations().eq(1).length).to.equal(0);
+
+      // false, false
       scope.two = false;
       scope.$apply();
       expect(getPermutations().eq(0).text()).to.equal('Fourth');
