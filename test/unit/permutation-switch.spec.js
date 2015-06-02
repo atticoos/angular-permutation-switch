@@ -141,4 +141,23 @@ describe('permutation-switch', function () {
       expect(getPermutations().eq(3).length).to.equal(0);
     });
   });
+
+  describe('exception cases', function () {
+    beforeEach(inject(function ($compile, $rootScope) {
+      scope = $rootScope.$new();
+      scope.one = true;
+      element = $compile([
+        '<div permutation-switch="{foo: one}">',
+        '  <div permutation-switch-when="foobar">First</div>',
+        '  <div permutation-switch-when="{foo: true}">Second</div>',
+        '</div>'
+      ].join('\n'))(scope);
+      scope.$apply();
+    }));
+
+    it ('should not display cases that are not objects', function () {
+      expect(getPermutations().eq(0).text()).to.equal('Second');
+      expect(getPermutations().eq(1).length).to.equal(0);
+    });
+  });
 });
