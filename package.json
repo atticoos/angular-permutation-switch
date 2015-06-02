@@ -1,6 +1,6 @@
 {
   "name": "angular-permutation-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angularjs permutation switch",
   "main": "src/permutation-switch.js",
   "scripts": {
