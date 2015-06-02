@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.4.1",
     "chai": "^2.3.0",
     "gulp": "^3.9.0",
     "karma": "^0.12.35",
